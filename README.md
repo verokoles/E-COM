@@ -1,4 +1,3 @@
 # E-COM
-## Purpose 
-
-## TABLE OF CONTENTS
+## Purpose
+## Table of Contents
