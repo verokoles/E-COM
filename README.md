@@ -39,7 +39,8 @@ SO THAT my company can compete with other e-commerce companies."
      ```
      Install all packages, run 'mysql -u root -p', source db/schema.sql, <br>
      source the seeds with 'node seeds', and run 'npm start' for MySQL <br>
-     to run the localhost on port 3001 to get, post, put and delete requests.
+     to run the localhost on port 3001 to get, post, put and delete requests. <br>
+     Changes made/created to API routes, and models to extend data from other models/tables.
 
 
 ## Usage:
@@ -54,6 +55,6 @@ SO THAT my company can compete with other e-commerce companies."
 
 
   
-## Contributing:
+## Contributing:octocat:
    Please be kind and professional when adding to or accessing this repository. Thank you!
   [More on Contribution Guidelines](https://github.com/verokoles/readme-generator/blob/f57cf6a98bf276960885496059df4b039247c985/contributing.md)
