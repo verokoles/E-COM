@@ -7,16 +7,10 @@ const { Tag, Product, ProductTag } = require('../../models');
 router.get('/', (req, res) => {
   // find all tags
   Tag.findAll({
-    attributes: [
-      'id',
-      'tag_name',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE Tag.id = vote.Tag_id)'), 'vote_count']
-    ],
     include: [
       {
         model: Product,
-        attributes: ['id', 'product_name', 'stock', 'price', 'category_id
-      ]
+        through: ProductTag
       },
     ]
   })
@@ -29,18 +23,14 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
-  Tag.findOne
+  Tag.findOne({
   where: {
     id: req.params.id
   },
-  attributes: [
-    'id',
-    'tag_name',
-    [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
-  ],
   include: [
     {
       model: Product,
+      through: ProductTag,
       attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
     },
   ]
@@ -60,10 +50,10 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new tag
-  Tag.create({
+  Tag.create({ 
     title: req.body.title,
     tag_url: req.body.tag_url,
-    tag_name: req.session.tag_name
+    tag_name: req.body.tag_name
   })
     .then(dbTagData => res.json(dbTagData))
     .catch(err => {
