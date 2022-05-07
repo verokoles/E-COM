@@ -1,4 +1,4 @@
-# E-COM
+# E-COM:arrows_clockwise:
 To build the back end for an e-commerce site. <br>
 Using Express.js API and configure it to using Sequelize <br>
 to interact with a MySQL database.
