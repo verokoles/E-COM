@@ -9,7 +9,7 @@ I WANT a back end for my e-commerce website that uses the latest technologies
 SO THAT my company can compete with other e-commerce companies."
 
 ## VIDEO:video_camera:
-[E-COM WALKTHROUGH]()
+[E-COM WALKTHROUGH](https://drive.google.com/file/d/1sMdyYEeOmUggMKM-XoPjVbY6WjxuD1Zm/view)
   ## Table of Contents::mag:
    1. [ Installation ](#installation)
    2. [ Usage ](#usage)
