@@ -57,7 +57,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   // create a new category
   Category.create({
-    category: req.body.category,
+    category: req.body.category_name,
   })
   .then(dbCategoryData => {
     req.session.save(() => {
@@ -70,6 +70,7 @@ router.post('/', (req, res) => {
     res.status(500).json(err);
   });
 });
+
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
